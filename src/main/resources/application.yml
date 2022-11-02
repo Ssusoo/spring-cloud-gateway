@@ -11,15 +11,15 @@ eureka:
 spring:
   application:
     name: gateway-service
-#  cloud:
-#    # zull 동일이며 비동기 서비스
-#    gateway:
-#      routes:
-#        - id: first-service
-#          uri: http://localhost:8081/
-#          predicates:
-#            - Path=/first-service/**
-#        - id: second-service
-#          uri: http://localhost:8082/
-#          predicates:
-#            - Path=/second-service/**
+  cloud:
+    # zull 동일이며 비동기 서비스
+    gateway:
+      routes:
+        - id: first-service
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/first-service/**
+        - id: second-service
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/second-service/**
